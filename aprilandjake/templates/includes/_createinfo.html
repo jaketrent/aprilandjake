@@ -1,0 +1,17 @@
+{% load comments %}
+{% get_comment_count for object as comment_count %}
+<ul class="meta-inf">
+  {% if object.file %}
+    <li><a href="/media/{{ object.file }}" target="_blank" class="sprite attach prefix">Download</a></li>
+  {% endif %}
+  <li>
+    <span class="comments">
+      <a class="spch-bub-inside" href="{% url aj2-content-detail object.title_slug %}#comments-link">
+        <em>{{ comment_count }}</em>
+        comment{{ comment_count|pluralize }}
+      </a>
+    </span>
+  </li>
+  <li>posted by {{ object.user.first_name|default:"user" }}</li>
+  <li>{{ object.date_published|date:"d M Y" }}</li>
+</ul>

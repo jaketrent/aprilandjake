@@ -1,0 +1,12 @@
+{% load comments %}
+{% get_comment_count for object as comment_count %}
+
+<div class="cn-info">
+	<div class="cn-tags">
+		{% include "includes/_taglist.html" %}
+	</div>
+	<div class="cn-comment-count">
+		<a href="{% url aj2-content-detail object.title_slug %}#comments-link">Comments: {{ comment_count }}</a>
+	</div>
+	<div class="clr cn-info-clr"></div>
+</div>

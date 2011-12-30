@@ -1,0 +1,10 @@
+<a href="{% url aj2-home %}" id="logo">
+  <img src="/media/images/top-title.jpg" alt="AprilandJake.com" title="AprilandJake.com" />
+</a>
+{% block nav %}
+  <ul class="topnav">
+    <li class="blog"><a href="{% url aj2-blog %}">Blog</a></li>
+    <li class="friends"><a href="{% url aj2-friends %}">Friends</a></li>
+    <li class="tags"><a href="{% url aj2-tags %}">Tags</a></li>
+  </ul>
+{% endblock %}

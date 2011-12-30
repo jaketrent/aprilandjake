@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script type="text/javascript" src="/media/scripts/modernizr-1.6.min.js"></script>
+  <script type="text/javascript" src="/media/scripts/friends.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      if (Modernizr.localstorage) {
+        friend.init_fav_stars();
+        friend.render_favs();
+        $(".friend-list .fav").click(friend.toggle_fav);
+      } else {
+        $(".friend-favs").hide();
+        $(".friend-list .fav").hide();
+      }
+    });
+  </script>
+{% endblock %}
+
+{% block body %}
+
+  {% block friends %}
+      <div class="runner"></div>
+      <ul class="friend-list">
+      {% for f in friends %}
+        <li>
+          <div class="name">{{ f.name }}</div>
+          <ul class="projs">
+            {% for fp in f.friendproject_set.all %}
+              <li>
+                <a href="javascript:void(0);" class="fav" id="{{ f.name }}|{{ fp.name }}|{{ fp.url }}">Fav</a>
+                <a href="{{ fp.url }}" class="proj" target="_blank">{{ fp.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+      </ul>
+  {% endblock %}
+
+{% endblock %}

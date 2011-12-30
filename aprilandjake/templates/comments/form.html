@@ -1,0 +1,27 @@
+{% load comments %}
+<form method="post" action="{% comment_form_target %}">
+  {% csrf_token %}
+  {% for field in form %}
+    {% if field.is_hidden %}
+      {{ field }}
+    {% else %}
+      <dl {% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %}>
+        <dt>
+          {{ field.label_tag }}
+        </dt>
+        <dd>
+          {% if field.errors %}{{ field.errors }}{% endif %}
+          {{ field|safe }}
+        </dd>
+      </dl>
+    {% endif %}
+  {% endfor %}
+  <dl>
+    <dt>
+      &nbsp;
+    </dt>
+    <dd>
+      <input type="submit" name="submit" class="submit" value="Comment">
+    </dd>
+  </dl>
+</form>

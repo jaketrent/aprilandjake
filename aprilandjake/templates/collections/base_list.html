@@ -1,0 +1,29 @@
+<div class="cn-list {% block type %}blog{% endblock %}-list {% block columns %}col-{{ object.columns }}{% endblock %}">
+  <h2>
+    <a href="{% url aj2-content-detail object.title_slug %}">{{ object.title }}</a>
+  </h2>
+  <div class="cn-summary">
+    {% if object.gallery.cover %}
+      <div class="cn-image">
+        <a href="{% url aj2-content-detail object.title_slug %}">
+          <img src="{{ object.gallery.cover }}" /></a>
+      </div>
+    {% endif %}
+    {% block summary %}
+      {{ object.summary|safe|linebreaks }}
+    {% endblock %}
+  </div>
+  {% block ss %}
+    {% if object.small_section_1 %}
+      <div class="cn-ss1">
+        {{ object.small_section_1|safe }}
+      </div>
+    {% endif %}
+    {% if object.small_section_2 %}
+      <div class="cn-ss2">
+        {{ object.small_section_2|safe }}
+      </div>
+    {% endif %}
+  {% endblock %}
+  {% include "includes/_createinfo.html" %}
+</div>

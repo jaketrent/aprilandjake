@@ -1,0 +1,19 @@
+{% extends "collections/base_list.html" %}
+
+{% block type %}podcast{% endblock %}
+
+{% block ss %}{% endblock %}
+
+{% block body %}
+  {{ block.super }}
+  {% if object.small_section_1 %}
+    <div class="cn-ss1">
+      {{ object.small_section_1|safe }}
+    </div>
+  {% endif %}
+  {% if object.small_section_2 %}
+    <div class="cn-ss2">
+      {{ object.small_section_2|safe }}
+    </div>
+  {% endif %}
+{% endblock %}

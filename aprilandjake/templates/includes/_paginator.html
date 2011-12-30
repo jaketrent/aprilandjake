@@ -1,0 +1,20 @@
+{% load aj2_tags %}
+{% if object.object_list %}
+
+<div class="pagination">
+	{% if object.has_previous %}
+		<a href="?page={{ object.previous_page_number }}" id="prev">&laquo; Previous</a>
+	{% endif %}
+
+  {% for page in object.paginator.page_range %}
+      <a href="?page={{ page }}" class="num{% if page|eq:object.number %} current-num{% endif %}">{{ page }}</a>
+  {% endfor %}
+  <!--Page {{ object.number }} of {{ object.paginator.num_pages }}-->
+
+  {% if object.has_next %}
+      <a href="?page={{ object.next_page_number }}" id="next">Next &raquo;</a>
+  {% endif %}
+
+</div>
+
+{% endif %}

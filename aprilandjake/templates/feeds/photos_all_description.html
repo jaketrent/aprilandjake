@@ -1,0 +1,7 @@
+{{ obj.summary|safe|linebreaks }}
+<p>
+	<a href="{% url obj.gallery.download_link %}">Download photos</a>
+</p>
+<p>
+	<a href="{% url aj2-content-detail obj.title_slug %}">See album...</a>
+</p>

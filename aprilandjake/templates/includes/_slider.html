@@ -1,0 +1,7 @@
+{% for c in object.object_list %}
+  <span class="jumper intro_img" title="{{ c.title }}" id="jump-{{ forloop.counter0 }}">
+    {% if c.intro_img %}
+      <img src="{{ c.intro_img }}" alt="{{ c.title }}" />
+    {% endif %}
+  </span>
+{% endfor %}

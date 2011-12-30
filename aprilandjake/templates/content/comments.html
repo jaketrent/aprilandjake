@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block recent-comments %}{% endblock %}
+
+{% block body %}
+	<div id="comments-page">
+		<h1>Comments</h1>
+		<ul>
+			{% for c in all_comments %}
+				<li>
+					<strong>{{ c.content_object.title }}</strong> -
+					<small><strong>{{ c.user_name }}</strong> - {{ c.submit_date|date:"d M Y, g:m a" }}</small> - 
+					{{ c.comment }}						
+				</li>
+			{% endfor %}
+		</ul>
+
+{% comment %}
+		<h1>Most Commented Content</h1>
+		<ul>
+			{% for c in most_commented %}
+				<li><span class="count">{{ c.count }}</span> - <a href="{% url aj2-content-detail c.title_slug %}">{{ c.title }}</a></li>
+			{% endfor %}
+		</ul>
+{% endcomment %}
+	</div>
+
+
+{% endblock %}

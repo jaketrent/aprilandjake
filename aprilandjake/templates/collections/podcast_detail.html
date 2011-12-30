@@ -1,0 +1,52 @@
+{% extends "collections/base_detail.html" %}
+
+{% block type %}podcast{% endblock %}
+
+{% block ss %}{% endblock %}
+
+{% block file %}
+  {% if object.file %}
+	  <h3 class="cn-file-title">Listen or Download</h3>
+	  <div class="cn-file-download">
+	    <a class="icon podcast-icon" target="_blank" href="/media/{{ object.file }}"></a>
+	    <br />
+	    <a target="_blank" href="/media/{{ object.file }}">Download</a>
+	  </div>
+	  <br />
+	  <div class="cn-file">
+	    <object type="application/x-shockwave-flash" data="/media/flash/player_mp3_maxi.swf" width="200" height="20">
+	      <param name="movie" value="/media/flash/player_mp3_maxi.swf" />
+	      <param name="FlashVars" value="mp3=/media/{{ object.file }}" />
+	    </object>
+	  </div>
+	{% endif %}
+{% endblock %}
+
+	{% block summary %}
+
+		<h3 class="cn-summary-title">Teaser</h3>
+		{{ object.summary|safe|linebreaks }}
+
+	{% endblock %}
+
+
+{% block body %}
+	{% if object.body %}
+		<div class="cn-body">
+			<h3 class="cn-body-title">Topics</h3>
+			{{ object.body|safe|linebreaks }}
+		</div>
+	{% endif %}
+    {% if object.small_section_2 %}
+		<div class="cn-ss2">
+			<h3 class="cn-ss2-title">Bumper Music</h3>
+			{{ object.small_section_2|safe }}
+		</div>
+	{% endif %}
+	{% if object.small_section_1 %}
+		<div class="cn-ss1">
+			<h3 class="cn-ss1-title">Length</h3>
+			{{ object.small_section_1|safe }}
+		</div>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "collections/base_list.html" %}
+
+{% load aj2_tags %}
+
+{% block type %}quote{% endblock %}
+
+{% block summary %}
+  <span style="font-size:{{ object.summary|get_quote_font_size }}">{{ object.summary|safe|linebreaks }}</span>
+{% endblock %}

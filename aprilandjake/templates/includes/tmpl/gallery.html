@@ -1,0 +1,19 @@
+{% load aj2_tags %}
+
+{% verbatim %}
+<script id="gallery-tmpl" type="text/x-jquery-tmpl">
+  <li class="album" data-albumId="${album.parseId(id.$t)}">
+    <a href="#/album/${album.parseId(id.$t)}">
+      <div class="pile">
+        {{tmpl(media$group.media$thumbnail[0]) "#img-tmpl"}}
+        {{tmpl(media$group.media$thumbnail[0]) "#img-tmpl"}}
+        {{tmpl(media$group.media$thumbnail[0]) "#img-tmpl"}}
+        {{tmpl(media$group.media$thumbnail[0]) "#img-tmpl"}}
+        {{tmpl(media$group.media$thumbnail[0]) "#img-tmpl"}}
+      </div>
+      <!--<p>${title.$t}</p>-->
+      <!--<span style="display:none;">${link[1].href}#slideshow</span>-->
+    </a>
+  </li>
+</script>
+{% endverbatim %}

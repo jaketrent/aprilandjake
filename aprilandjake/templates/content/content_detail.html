@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load aj2_tags %}
+{% load comments %}
+
+{% block page-title %}
+    - {{ content.collection.title }} - {{ content.title }}
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script type="text/javascript" src="/media/scripts/swfobject.js"></script>
+{% endblock %}
+
+{% block body %}
+	<div id="content-detail" class="detailness">
+		{% detail_template content %}
+	</div>
+  
+	<div id="comments" class="detailness">
+		<a name="comments-link"></a>
+		<div id="comment-form">
+			<h2>Make a Comment</h2>
+			{% get_comment_form for content as form %}
+			{% include "comments/form.html" %}
+		</div>
+	</div>
+  
+  {% get_comment_count for content as comment_count %}
+  {% get_comment_list for content as commentset %}
+  {% include "includes/_commentlist.html" %}
+{% endblock %}
+
+{% block mini-tag-cloud %}
+	<h3>Article Tags</h3>
+	{% with content as object %}
+		{% include "includes/_taglist.html" %}
+	{% endwith %}
+{% endblock %}
+
+{% block gallery-download-link %}
+	{% if content.gallery.download_link %}
+		<a class="download-album" onclick="javascript:window.location='{{ content.gallery.download_link }}';">Download Album</a>
+	{% endif %}
+{% endblock %}
+
+{% block bookmark %}
+	<h3>Share</h3>
+	<div id="bookmark">		
+		<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style">
+			<a class="addthis_button_delicious" title="Save on Delicious"></a>
+			<a class="addthis_button_twitter" title="Share on Twitter"></a>
+			<a class="addthis_button_blogger" title="Share on Blogger"></a>
+			<a class="addthis_button_facebook" title="Share on Facebook"></a>
+			<a class="addthis_button_tumblr" title="Share on Tumblr"></a>
+			<a class="addthis_button_digg" title="Share on Digg"></a>
+			<a class="addthis_button_favorites" title="Save in favorites"></a>
+			<!--<span class="addthis_separator">|</span>
+			<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button_expanded">More</a>-->
+		</div>
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=xa-4a2abc966d45e53e"></script>
+		<!-- AddThis Button END -->
+	</div>
+{% endblock %}
+
+{% block friends %}{% endblock %}
+
