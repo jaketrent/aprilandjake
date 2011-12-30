@@ -1,9 +1,7 @@
-bin
-build
-include
-lib
+venv
 .Python
 *.pyc
 .idea
 *.ipr
 *.iml
+*.pyc
