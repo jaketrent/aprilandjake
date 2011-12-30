@@ -1,5 +1,6 @@
 from django.contrib import admin
 from content.models import Content, Collection, Template
+from django.contrib.contenttypes.models import ContentType
 
 class ContentAdmin(admin.ModelAdmin):
 	list_display = ['title', 'id', 'date_published', 'date_created', 'date_updated', 'active']
@@ -39,6 +40,17 @@ class TemplateAdmin(admin.ModelAdmin):
 	list_display = ['title', 'id', 'date_created', 'date_updated', 'active']
 	prepopulated_fields = {'title_slug': ('title',)}
 
+class ContentTypeAdmin(admin.ModelAdmin):
+  list_display = ['name', 'app_label']
+  fieldsets = (
+    ('', {
+      'classes': ('',),
+      'fields': ('name', 'app_label')
+    }),
+  )
+
+
+admin.site.register(ContentType, ContentTypeAdmin)
 admin.site.register(Content, ContentAdmin)
 admin.site.register(Collection, CollectionAdmin)
 admin.site.register(Template, TemplateAdmin)

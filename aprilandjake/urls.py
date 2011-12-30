@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django import forms
 
@@ -35,10 +36,4 @@ urlpatterns = patterns('',
   url(r'^admin/', include(admin.site.urls)),
 )
 
-# django serves up static files in debug mode
-if settings.DEBUG:
-	urlpatterns += patterns('django.views.static',
-		(r'^media/(?P<path>.*)$', 'serve',
-		{'document_root': settings.MEDIA_ROOT}),
-	)
-
+urlpatterns += staticfiles_urlpatterns()

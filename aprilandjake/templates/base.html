@@ -9,13 +9,13 @@
   <title>AprilandJake.com{% block page-title %}{% endblock %}</title>
   <link rel="alternate" type="application/rss+xml" title="AprilandJake.com Blog RSS" href="/feeds/blog/"/>
   {% block styles %}
-    <link rel="stylesheet" href="/media/styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}styles/style.css" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
   {% endblock %}
   {% block scripts %}
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="/media/scripts/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="/media/scripts/jquery.phototower.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.phototower.js"></script>
    {% endblock %}
 </head>
 

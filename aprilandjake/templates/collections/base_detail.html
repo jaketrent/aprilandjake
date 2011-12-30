@@ -32,7 +32,7 @@
     <div class="cn-gallery">
       <div id="flashcontent">Flash is busted.  Blast!  Please email Jake and tell him your browser version.</div>
       <script type="text/javascript">
-      var so = new SWFObject("/media/flash/xmlGallery.swf", "gallery", "100%", "650", "6", "#FFFFFF");
+      var so = new SWFObject("{{ STATIC_URL }}flash/xmlGallery.swf", "gallery", "100%", "650", "6", "#FFFFFF");
       so.addVariable("file_to_load", "{{ object.gallery.xml_link }}");
       so.addParam("wmode", "transparent");
       so.write("flashcontent");

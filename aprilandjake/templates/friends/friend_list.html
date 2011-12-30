@@ -2,8 +2,8 @@
 
 {% block scripts %}
   {{ block.super }}
-  <script type="text/javascript" src="/media/scripts/modernizr-1.6.min.js"></script>
-  <script type="text/javascript" src="/media/scripts/friends.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}scripts/modernizr-1.6.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}scripts/friends.js"></script>
   <script type="text/javascript">
     $(function () {
       if (Modernizr.localstorage) {

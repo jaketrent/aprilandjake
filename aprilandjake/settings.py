@@ -2,7 +2,7 @@ import os
 
 PROJ_PATH = os.path.dirname(__file__)
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -66,7 +66,7 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/media/admin/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -108,10 +108,11 @@ TEMPLATE_DIRS = (
 	os.path.join(PROJ_PATH, 'templates'),
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-	'context_processors.content_common',
-	'django.core.context_processors.auth',
-)
+#TEMPLATE_CONTEXT_PROCESSORS = (
+#  'django.core.context_processors.static',
+#	'context_processors.content_common',
+#	'django.core.context_processors.auth',
+#)
 
 INSTALLED_APPS = (
   'django.contrib.auth',

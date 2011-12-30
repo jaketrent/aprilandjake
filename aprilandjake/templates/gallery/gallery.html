@@ -22,7 +22,7 @@
       margin: 3px 0 0 48px;
       height: 16px;
       width: 16px;
-      background: url(/media/images/ajax-loader.gif) no-repeat center;
+      background: url({{ STATIC_URL }}images/ajax-loader.gif) no-repeat center;
     }
     .album {
       display: inline-block;
@@ -102,9 +102,9 @@
 
 {% block scripts %}
   {{ block.super }}
-  <script type="text/javascript" src="/media/scripts/sammy.js"></script>
-  <script type="text/javascript" src="/media/scripts/jquery.tmpl.min.js"></script>
-  <script type="text/javascript" src="/media/scripts/jquery.photopeek.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}scripts/sammy.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.photopeek.js"></script>
   
   {% include "includes/tmpl/gallery.html" %}
   {% include "includes/tmpl/album.html" %}
