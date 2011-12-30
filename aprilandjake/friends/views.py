@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.template.defaultfilters import slugify
 from tagging.models import Tag, TaggedItem
-from django.contrib.comments.models import Comment
 import context_processors as cp
 import util
 from settings import PHOTOS_ZIP_PATH, PHOTOS_ZIP_URL

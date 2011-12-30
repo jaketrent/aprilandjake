@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from django.template.defaultfilters import slugify
 from tagging.models import Tag, TaggedItem
-from django.contrib.comments.models import Comment
 import context_processors as cp
 import util
 from settings import PHOTOS_ZIP_PATH, PHOTOS_ZIP_URL
@@ -70,23 +69,3 @@ def content_quotes(request):
 
 def content_photos(request):
   return content_collection(request, "photos", "blog")
-
-def content_comments(request, slug):
-  content = get_object_or_404(Content, active=True, title_slug=slug)
-  comments = Comment.objects.filter(object = content)
-  return
-
-def all_comments(request):
-  all_comments = Comment.objects.order_by("-submit_date")
-  #most_commented = Content().get_most_commented()
-  return render_to_response('content/comments.html', locals(),
-  context_instance=RequestContext(request, processors=[cp.content_common]))
-
-def comment_posted(request):
-  if request.GET['c']:
-    comment_id = request.GET['c']
-    content_id = Comment.objects.get(pk=comment_id).object_pk
-    post = Content.objects.get(pk=content_id)
-    if post:
-      return HttpResponseRedirect(post.get_absolute_url())
-  return HttpResponseRedirect("/")

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% load aj2_tags %}
-{% load comments %}
 
 {% block page-title %}
     - {{ content.collection.title }} - {{ content.title }}
@@ -20,15 +19,9 @@
 	<div id="comments" class="detailness">
 		<a name="comments-link"></a>
 		<div id="comment-form">
-			<h2>Make a Comment</h2>
-			{% get_comment_form for content as form %}
-			{% include "comments/form.html" %}
+			<!-- todo: integrate future comments here -->
 		</div>
 	</div>
-  
-  {% get_comment_count for content as comment_count %}
-  {% get_comment_list for content as commentset %}
-  {% include "includes/_commentlist.html" %}
 {% endblock %}
 
 {% block mini-tag-cloud %}

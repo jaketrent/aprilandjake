@@ -21,5 +21,4 @@ urlpatterns = patterns('',
 	url(r'^blog/$', content_blog, name='aj2-blog'),
 	url(r'^quotes/$', content_quotes, name='aj2-quotes'),
 
-	url(r'^comments/$', all_comments, name='aj2-all-comments'),
 )
