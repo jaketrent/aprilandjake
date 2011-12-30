@@ -4,14 +4,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
 from tagging.fields import TagField
-from settings import DIRNAME
+from settings import PROJ_PATH
 from gallery.models import Gallery
 
 class Template(models.Model):
 	title = models.CharField(max_length=250)
 	title_slug = models.SlugField(unique=True)
-	list_path = models.FilePathField(path=os.path.join(DIRNAME, "templates/collections/"), match=".*\.html$", recursive=True)
-	detail_path = models.FilePathField(path=os.path.join(DIRNAME, "templates/collections/"), match=".*\.html$", recursive=True)
+	list_path = models.FilePathField(path=os.path.join(PROJ_PATH, "templates/collections/"), match=".*\.html$", recursive=True)
+	detail_path = models.FilePathField(path=os.path.join(PROJ_PATH, "templates/collections/"), match=".*\.html$", recursive=True)
 	date_created = models.DateTimeField(editable=False, auto_now_add=True)
 	date_updated = models.DateTimeField(editable=False, auto_now=True)
 	active = models.BooleanField(default=True)

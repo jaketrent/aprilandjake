@@ -32,7 +32,7 @@ urlpatterns = patterns('',
 
 	(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
-  (r'^admin/(.*)', admin.site.root),
+  url(r'^admin/', include(admin.site.urls)),
 )
 
 # django serves up static files in debug mode
