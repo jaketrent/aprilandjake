@@ -6,3 +6,6 @@ venv
 *.iml
 *.pyc
 static
+.svn
+.hg
+.git
