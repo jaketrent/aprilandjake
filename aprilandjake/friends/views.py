@@ -9,14 +9,16 @@ from tagging.models import Tag, TaggedItem
 import context_processors as cp
 import util
 from settings import PHOTOS_ZIP_PATH, PHOTOS_ZIP_URL
-from content.models import Content
+from friends.models import Friend
 
 def friend_list(request):
-	# todo: implement
-	#content = util.paginate(request, Content.objects.filter(active=True).order_by("-date_published"))
-	section = "friends"
-	return render_to_response('friends/friends.html', locals(),
-		context_instance=RequestContext(request, processors=[]))
+  friends = Friend.objects.filter(active=True).order_by("name")
+  print "Friends..."
+  print friends
+  print "End friends"
+  section = "friends"
+  return render_to_response('friends/friend_list.html', locals(),
+    context_instance=RequestContext(request, processors=[]))
 
 def runner(request):
   return render_to_response('friends/runner.html', locals(),

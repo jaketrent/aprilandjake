@@ -19,14 +19,14 @@ sitemaps = {
 }
 
 urlpatterns = patterns('',
-  (r'^', include('content.urls')),
-	(r'^photos/', include('gallery.urls')),
-	(r'^friends/', include('friends.urls')),
-	(r'^picasa/', include('picasa.urls')),
+  url(r'^', include('content.urls')),
+	url(r'^photos/', include('gallery.urls')),
+	url(r'^friends/', include('friends.urls')),
+	url(r'^picasa/', include('picasa.urls')),
 
-	(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
+	url(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
 
-	(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+	url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
   url(r'^admin/', include(admin.site.urls)),
 )

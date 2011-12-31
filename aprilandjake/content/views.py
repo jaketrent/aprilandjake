@@ -39,11 +39,6 @@ def tag_list(request):
 	return render_to_response('content/tag_list.html', locals(),
 		context_instance=RequestContext(request, processors=[]))
 
-def friend_list(request):
-	section = "friends"
-	return render_to_response("friends/friend_list.html", locals(),
-		context_instance=RequestContext(request, processors=[]))
-
 def content_detail(request, slug):
   section="blog"
   content = get_object_or_404(Content, active=True, title_slug=slug)

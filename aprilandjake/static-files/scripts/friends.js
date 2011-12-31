@@ -101,7 +101,7 @@ var friend = {
     var num_favs = friend.fav_cache.length;
     var html = "";
     if (num_favs > 0) {
-      html += "View your favorites on:<br /><a href='/friends/favs/'><img src='/media/images/runner-logo.png' /></a>";
+      html += "View your favorites on:<br /><a href='/friends/favs/'><img src='/static/images/runner-logo.png' /></a>";
     }
     $(".runner").html(html);
   },
