@@ -31,4 +31,11 @@ urlpatterns = patterns('',
   url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += staticfiles_urlpatterns()
+if settings.DEBUG is False:
+  urlpatterns += patterns('',
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+  )
+elif settings.DEBUG is True:
+  urlpatterns += staticfiles_urlpatterns()
+
+
