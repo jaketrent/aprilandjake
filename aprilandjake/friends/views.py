@@ -13,9 +13,6 @@ from friends.models import Friend
 
 def friend_list(request):
   friends = Friend.objects.filter(active=True).order_by("name")
-  print "Friends..."
-  print friends
-  print "End friends"
   section = "friends"
   return render_to_response('friends/friend_list.html', locals(),
     context_instance=RequestContext(request, processors=[]))
