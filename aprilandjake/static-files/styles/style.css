@@ -27,7 +27,7 @@ ul, ol {
 }
 .main {
   position: relative;
-  padding: 12px 10px 20px 30px;
+  padding: 12px 10px 20px 80px;
   width: 620px;
   background: rgba(0,0,0,.5);
   margin-left: 100px;
@@ -36,63 +36,19 @@ ul, ol {
 }
 
 #title {
-	width: 95px;
-	height: 96px;
+	width: 141px;
+	height: 516px;
   text-indent: -996em;
   position: fixed;
-  top: 40px;
-  left: 40px;
+  top: -2px;
+  left: 33px;
   z-index: 2;
-  overflow: hidden;
 }
 #title a {
-  position: absolute;
-   overflow: hidden;
-   top: 0;
-   left: 0;
-  height: 95px;
-  width: 96px;
   display: block;
-  background: url('../images/iconmap.png') no-repeat -8px -22px;
-   -webkit-transform: scaleY(1);
-   -moz-transform: scaleY(1);
-   -o-transform: scaleY(1);
-   -ms-transform: scaleY(1);
-   transform: scaleY(1);
-   -webkit-transition: all .4s ease-in-out;
-   -moz-transition: all .4s ease-in-out;
-   -o-transition: all .4s ease-in-out;
-   -ms-transition: all .4s ease-in-out;
-   transition: all .4s ease-in-out;
-  z-index: 4;
-}
-#title .mask {
-   background: url('../images/iconmap.png') no-repeat -8px -122px;
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 1;
-  z-index: 3;
-
-}
-#title a:hover {
-   -webkit-transform: scale(10);
-   -moz-transform: scale(10);
-   -o-transform: scale(10);
-   -ms-transform: scale(10);
-   transform: scale(10);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-}
-#title a:hover .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
+  height: 100%;
+  width: 100%;
+  background: url(../images/aj8-ribbon.png) no-repeat center top;
 }
 
 
@@ -102,8 +58,8 @@ ul, ol {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  top: 140px;
-  left: 45px;
+  top: 513px;
+  left: 50px;
 }
 .mainnav li a {
   height: 35px;
@@ -131,6 +87,15 @@ ul, ol {
   background: url('../images/iconmap.png') no-repeat -65px -301px;
 }
 
+#photos #title {
+  left: 33px;
+}
+#photos .mainnav {
+  left: 111px;
+}
+#photos .floor {
+  padding-left: 121px;
+}
 
 .rand-pile {
   position: absolute;
