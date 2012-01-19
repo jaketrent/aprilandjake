@@ -161,44 +161,9 @@ ul, ol {
 
 .detailness {
   margin: 10px;
-  float: left;
 }
 .cn-detail {
   width: 260px;
-}
-#comments {
-  width: 260px;
-}
-#comments input, #comments textarea {
-  width: 250px;
-}
-#comments .submit {
-  width: auto;
-}
-#comments dl {
-  overflow: auto;
-}
-#comments dd {
-  margin: 0px;
-}
-#comment-list {
-  width: 260px;
-}
-#comment-list .cm {
-  margin-top: 10px;
-}
-#comment-list .cm-name {
-  font-size: 20px;
-  color: #35BCDA;
-}
-#comment-list .cm-name a {
-  color: #35BCDA;
-}
-#comment-list .cm-date {
-  font-size: 10px;
-  margin-top: 3px;
-  color: #848c94;
-  text-align: right;
 }
 .error, .errorlist {
   color: #e42121;

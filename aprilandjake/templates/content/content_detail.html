@@ -18,9 +18,20 @@
   
 	<div id="comments" class="detailness">
 		<a name="comments-link"></a>
-		<div id="comment-form">
-			<!-- todo: integrate future comments here -->
-		</div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'aprilandjake'; // required: replace example with your forum shortname
+        var disqus_identifier = '{{ content.title_slug }}';
+        var disqus_url = 'http://aprilandjake.com{% url aj2-content-detail content.title_slug %}';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 	</div>
 {% endblock %}
 
