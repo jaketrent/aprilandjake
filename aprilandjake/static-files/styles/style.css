@@ -314,3 +314,16 @@ ul, ol {
   color: #00b0d4;
   text-decoration: underline;
 }
+
+.podcast-detail .cn-file-title,
+.podcast-detail .cn-summary-title,
+.podcast-detail .cn-body-title,
+.podcast-detail .cn-ss2-title,
+.podcast-detail .cn-ss1-title {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #35BCDA;
+}
+.podcast-detail .cn-file {
+  margin: 5px 0 10px 0;
+}
