@@ -20,6 +20,7 @@ sitemaps = {
 
 urlpatterns = patterns('',
   url(r'^', include('content.urls')),
+  url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/images/favicon.ico'}),
 	url(r'^photos/', include('gallery.urls')),
 	url(r'^friends/', include('friends.urls')),
 	url(r'^picasa/', include('picasa.urls')),
