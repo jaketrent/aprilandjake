@@ -3,8 +3,9 @@
   $.fn.phototower = function (settings) {
 
     var defaults = {
-      url: "http://picasaweb.google.com/data/feed/base/user/trent.jake?alt=json&kind=photo&hl=en_US&access=public",
-      top_offset: 85,
+      url: "http://picasaweb.google.com/data/feed/api/user/115032056022257436849/albumid/5713567309409080369?alt=json",
+      top_offset: 35,
+      left_offset: 825,
       img_height: 216,
       img_width: 288,
       addt_height: 40
@@ -55,23 +56,26 @@
         var bottomScrollY = $(window).scrollTop() + $(window).height();
         var towerHeight = photo.rendered_index * (opts.img_height + opts.addt_height) + opts.top_offset;
         if (towerHeight + (opts.img_height + opts.addt_height) < bottomScrollY) {
-          var thumbnail = photo.cache[photo.rendered_index++].thumbnail;
-          var $img = $($("#img-tmpl").tmpl(thumbnail));
-          $img.css({
-            'top': towerHeight,
-            'left': 680
-          });
+          var cachedPhoto = photo.cache[photo.rendered_index++];
+          if (cachedPhoto !== undefined) {
+            var thumbnail = cachedPhoto.thumbnail;
+            var $img = $($("#img-tmpl").tmpl(thumbnail));
+            $img.css({
+              'top': towerHeight,
+              'left': opts.left_offset
+            });
 
-          $this.queue("tower", function() {
-            $this.append($img);
-            setTimeout(function() {
-              $this.dequeue("tower");
-              $img.css({
-                opacity: 1
-              });
-            }, 1500);
-          });
-          $this.dequeue("tower");
+            $this.queue("tower", function() {
+              $this.append($img);
+              setTimeout(function() {
+                $this.dequeue("tower");
+                $img.css({
+                  opacity: 1
+                });
+              }, 1500);
+            });
+            $this.dequeue("tower");
+          }
         }
       }
     };
