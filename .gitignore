@@ -1,11 +1,4 @@
-venv
-.Python
-*.pyc
 .idea
 *.ipr
 *.iml
-*.pyc
-static
-.svn
-.hg
-.git
+style.css
