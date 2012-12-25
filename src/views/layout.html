@@ -14,12 +14,12 @@
   <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+  <script type="text/javascript" src="/js/angular.min.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
   {% block head %}{% endblock %}
 
 </head>
-<body>
+<body ng-controller="MainCtrl">
 
 <div class="navbar">
   <div class="navbar-inner">
@@ -28,7 +28,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="container-fluid">
     <div class="row-fluid">
