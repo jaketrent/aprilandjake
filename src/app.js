@@ -3,12 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , cons = require('consolidate')
-  , http = require('http')
-  , swig = require('swig')
-  , path = require('path');
+var express = require('express');
+var routes = require('./routes');
+var cons = require('consolidate');
+var http = require('http');
+var swig = require('swig');
+var path = require('path');
 
 var app = express();
 
