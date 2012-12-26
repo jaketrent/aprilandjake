@@ -14,7 +14,7 @@
       <div class="thumbnail">
         <img ng-src="[[vid.video.thumbnail.sqDefault]]" alt="[[vid.video.title]]" ng-click="callPlayer(&quot;whateverID&quot;, &quot;loadVideoById&quot;, [vid.video.id, 0, &quot;large&quot;])">
         <h3>[[vid.video.title]]</h3>
-        <p>[[vid.video.uploaded]]</p>
+        <p>[[vid.video.uploaded| date:'dd MMM yyyy']]</p>
       </div>
     </li>
   </ul>
