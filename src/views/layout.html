@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app>
+<html lang="en" ng-app="aj">
 
 <head>
   <title>{% block title %}AprilandJake.com{% endblock %}</title>
-
-  <!--[if lte IE 8]>
-  <script src="//ajax.cdnjs.com/ajax/libs/json2/20110223/json2.min.js"></script>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.min.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
 
   <script type="text/javascript" src="/js/angular.min.js"></script>
+  <script type="text/javascript" src="//www.youtube.com/iframe_api"></script>
   <script type="text/javascript" src="/js/main.js"></script>
+
+
   {% block head %}{% endblock %}
 
 </head>
 <body ng-controller="MainCtrl">
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="brand" href="/">AprilandJake</a>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">AprilandJake</a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row-fluid">
       <div class="span12">
         {% block content %}{% endblock %}
@@ -42,6 +40,8 @@
       &copy 2012 April &amp; Jake - Powered by the Web
     {% endblock %}
   </footer>
+
+{% block bottom %}{% endblock %}
 
 </body>
 </html>

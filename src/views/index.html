@@ -1,5 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  Welcome
+  <a href="#" ng-click="callPlayer(&quot;whateverID&quot;,&quot;playVideo&quot;)">Start</a> &bull;
+  <a href="#" ng-click="callPlayer(&quot;whateverID&quot;,&quot;pauseVideo&quot;)">Pause</a> &bull;
+  <a href="#" ng-click="callPlayer(&quot;whateverID&quot;,&quot;stopVideo&quot;)">Stop</a>
+
+  <div id="whateverID">
+    <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
+      ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
+  </div>
+
+  <ul class="thumbnails videos">
+    <li class="span12" ng-repeat="vid in videos">
+      <div class="thumbnail">
+        <img ng-src="[[vid.video.thumbnail.sqDefault]]" alt="[[vid.video.title]]" ng-click="callPlayer(&quot;whateverID&quot;, &quot;loadVideoById&quot;, [vid.video.id, 0, &quot;large&quot;])">
+        <h3>[[vid.video.title]]</h3>
+        <p>[[vid.video.uploaded]]</p>
+      </div>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block bottom %}
+
 {% endblock %}
