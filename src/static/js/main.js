@@ -8,19 +8,12 @@ function MainCtrl($scope, $http) {
   $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9?v=2&alt=jsonc&orderby=reversedPosition&callback=JSON_CALLBACK')
     .success(function(data, status, headers, config) {
       $scope.videos = data.data.items;
-      console.log(data);
     }).error(function(data, status, headers, config) {
       console.log('ERROR');
       console.log(data);
     });
 
   function callPlayer(frame_id, func, args) {
-
-    console.log('calling player');
-    console.log('args:');
-    console.log(args);
-    console.log('done');
-
     if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
     var iframe = document.getElementById(frame_id);
     if (iframe && iframe.tagName.toUpperCase() != 'IFRAME') {
