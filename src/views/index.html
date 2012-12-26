@@ -8,7 +8,7 @@
 
   <ul class="thumbnails videos">
     <li class="span12" ng-repeat="vid in videos">
-      <div class="thumbnail" ng-click="callPlayer(&quot;video-pane&quot;, &quot;loadVideoById&quot;, [vid.video.id, 0, &quot;large&quot;])">
+      <div class="thumbnail" ng-click="playVideo(vid.video.id)">
         <img ng-src="[[vid.video.thumbnail.sqDefault]]" alt="[[vid.video.title]]">
         <h3>[[vid.video.title]]</h3>
         <div>[[vid.video.updated| date:'dd MMM yyyy']]</div>

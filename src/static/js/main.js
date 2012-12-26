@@ -14,7 +14,7 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
-  $scope.callPlayer = function (frame_id, func, args) {
+  function callPlayer(frame_id, func, args) {
 
     console.log('calling player');
     console.log('args:');
@@ -31,13 +31,13 @@ function MainCtrl($scope, $http) {
     // Each frame_id is associated with an own queue.
     // Each queue has three possible states:
     //  undefined = uninitialised / array = queue / 0 = ready
-    if (!$scope.callPlayer.queue) $scope.callPlayer.queue = {};
-    var queue = $scope.callPlayer.queue[frame_id],
+    if (!callPlayer.queue) callPlayer.queue = {};
+    var queue = callPlayer.queue[frame_id],
       domReady = document.readyState == 'complete';
 
     if (domReady && !iframe) {
       // DOM is ready and iframe does not exist. Log a message
-      window.console && console.log('$scope.callPlayer: Frame not found; id=' + frame_id);
+      window.console && console.log('callPlayer: Frame not found; id=' + frame_id);
       if (queue) clearInterval(queue.poller);
     } else if (func === 'listening') {
       // Sending the "listener" message to the frame, to request status updates
@@ -46,12 +46,12 @@ function MainCtrl($scope, $http) {
         iframe.contentWindow.postMessage(func, '*');
       }
     } else if (!domReady || iframe && (!iframe.contentWindow || queue && !queue.ready)) {
-      if (!queue) queue = $scope.callPlayer.queue[frame_id] = [];
+      if (!queue) queue = callPlayer.queue[frame_id] = [];
       queue.push([func, args]);
       if (!('poller' in queue)) {
         // keep polling until the document and frame is ready
         queue.poller = setInterval(function() {
-          $scope.callPlayer(frame_id, 'listening');
+          callPlayer(frame_id, 'listening');
         }, 250);
         // Add a global "message" event listener, to catch status updates:
         messageEvent(1, function runOnceReady(e) {
@@ -63,7 +63,7 @@ function MainCtrl($scope, $http) {
             messageEvent(0, runOnceReady);
             // .. and release the queue:
             while (tmp = queue.shift()) {
-              $scope.callPlayer(frame_id, tmp[0], tmp[1]);
+              callPlayer(frame_id, tmp[0], tmp[1]);
             }
           }
         }, false);
@@ -88,5 +88,10 @@ function MainCtrl($scope, $http) {
         (add ? window.attachEvent : window.detachEvent)('onmessage', listener);
     }
   }
+
+
+  $scope.playVideo = function (videoId) {
+    callPlayer('video-pane', 'loadVideoById', [videoId, 0, 'large']);
+  };
 
 }
