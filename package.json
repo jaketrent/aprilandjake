@@ -14,7 +14,6 @@
     "swig": "0.13.x",
     "consolidate": "0.5.x",
     "less-middleware": "0.1.x",
-    "konphyg": "1.2.x",
     "superagent": "0.10.x",
     "underscore": "1.4.x"
   },

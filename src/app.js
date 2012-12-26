@@ -8,7 +8,6 @@ var express = require('express')
   , cons = require('consolidate')
   , http = require('http')
   , swig = require('swig')
-  , konphyg = require('konphyg')(__dirname + '/config')
   , path = require('path');
 
 var app = express();
