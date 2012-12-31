@@ -1,20 +1,41 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <div id="video-pane">
-    <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
-      ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
+  <div class="row-fluid">
+    <div class="span6">
+      <div id="video-pane">
+        <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
+          ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
+      </div>
+
+      <ul class="thumbnails unstyled videos">
+        <li class="span12" ng-repeat="vid in videos">
+          <div class="thumbnail" ng-click="playVideo(vid.video.id)">
+            <img ng-src="[[vid.video.thumbnail.sqDefault]]" alt="[[vid.video.title]]">
+            <h3>[[vid.video.title]]</h3>
+            <div>[[vid.video.updated| date:'dd MMM yyyy']]</div>
+          </div>
+        </li>
+      </ul>
+      <a class="btn" href="http://www.youtube.com/playlist?list=PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9&feature=view_all">More Videos &rarr;</a>
+    </div>
+
+    <div class="span6">
+      <ul class="unstyled images">
+        <li ng-repeat="img in images">
+          <ul class="unstyled thumbs">
+            <li ng-repeat="thumb in img.object.attachments[0].thumbnails|limitTo:7">
+              <a href="[[thumb.url]]">
+                <img ng-src="[[thumb.image.url]]" class="w[[thumb.image.width]]"/>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a class="btn" href="https://plus.google.com/photos/115032056022257436849/albums">More Photos &rarr;</a>
+    </div>
   </div>
 
-  <ul class="thumbnails videos">
-    <li class="span12" ng-repeat="vid in videos">
-      <div class="thumbnail" ng-click="playVideo(vid.video.id)">
-        <img ng-src="[[vid.video.thumbnail.sqDefault]]" alt="[[vid.video.title]]">
-        <h3>[[vid.video.title]]</h3>
-        <div>[[vid.video.updated| date:'dd MMM yyyy']]</div>
-      </div>
-    </li>
-  </ul>
 {% endblock %}
 
 {% block bottom %}

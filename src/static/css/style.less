@@ -7,9 +7,13 @@ a {
   color: #00B7FF;
 }
 
+.unstyled {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
 
 .videos {
-  list-style: none;
   max-width: 640px;
   .thumbnail {
     cursor: pointer;
@@ -28,5 +32,23 @@ a {
   h3 {
     font-size: 1.5em;
     line-height: 1.2em;
+  }
+}
+
+.images {
+  max-width: 640px;
+  .thumbs {
+    margin-left: -10px;
+    li {
+      float: left;
+      margin: 10px 0 0 10px;
+    }
+    img {
+      max-width: 100%;
+      &.w497 {
+        width: 460px;
+      }
+    }
+    overflow: hidden;
   }
 }

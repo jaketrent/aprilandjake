@@ -1,0 +1,213 @@
+{"apiVersion": "2.1", "data": {
+  "id": "PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9",
+  "author": "brotaojun",
+  "title": "AprilandJakeCom",
+  "description": "",
+  "thumbnail": {
+    "sqDefault": "http://i.ytimg.com/vi/qu5RY94ldDc/default.jpg",
+    "hqDefault": "http://i.ytimg.com/vi/qu5RY94ldDc/hqdefault.jpg"
+  },
+  "content": {
+    "5": "http://www.youtube.com/p/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9"
+  },
+  "totalItems": 4,
+  "startIndex": 1,
+  "itemsPerPage": 25,
+  "items": [
+    {
+      "id": "PLDzOvOd0wgh7RJT5s-w76rKHbTuIq8n4wIzCu7ND77xg",
+      "position": 4,
+      "author": "brotaojun",
+      "video": {
+        "id": "iuIxnlxlpu4",
+        "uploaded": "2011-03-05T23:19:52.000Z",
+        "updated": "2012-12-26T01:38:26.000Z",
+        "uploader": "rianjs",
+        "category": "Music",
+        "title": "Andrea Bocelli and the Mormon Tabernacle Choir - The Lords Prayer",
+        "description": "In 2009, Andrea Bocelli and David Foster collaborated with the Mormon Tabernacle Choir on a rendition of The Lord's Prayer. This is from the DVD \"My Christmas\", which is an absolutely amazing album.\r\n\r\nThis YouTube version was ripped and uploaded directly from the raw DVD VOB files, which means quality should be higher than some of the other HD versions which are basically photocopies of a photocopy.\r\n\r\nYou can get the album from any of the links below:\r\n\r\n- My Christmas: Amazon MP3 downloads: http://amzn.to/dUrI5V\r\n- My Christmas: Amazon CD: http://amzn.to/h3qyw5\r\n- My Christmas: Deluxe CD and DVD combo: http://amzn.to/g4qgaT\r\n- My Christmas: DVD: http://amzn.to/hr2Jqg",
+        "thumbnail": {
+          "sqDefault": "http://i.ytimg.com/vi/iuIxnlxlpu4/default.jpg",
+          "hqDefault": "http://i.ytimg.com/vi/iuIxnlxlpu4/hqdefault.jpg"
+        },
+        "player": {
+          "default": "http://www.youtube.com/watch?v=iuIxnlxlpu4&feature=youtube_gdata_player"
+        },
+        "content": {
+          "5": "http://www.youtube.com/v/iuIxnlxlpu4?version=3&f=playlists&app=youtube_gdata"
+        },
+        "duration": 327,
+        "rating": 4.9757576,
+        "likeCount": "328",
+        "ratingCount": 330,
+        "viewCount": 131130,
+        "favoriteCount": 0,
+        "commentCount": 28,
+        "status": {
+          "value": "restricted",
+          "reason": "limitedSyndication"
+        },
+        "restrictions": [
+          {
+            "type": "country",
+            "relationship": "deny",
+            "countries": "DE"
+          }
+        ],
+        "accessControl": {
+          "comment": "allowed",
+          "commentVote": "allowed",
+          "videoRespond": "moderated",
+          "rate": "allowed",
+          "embed": "allowed",
+          "list": "allowed",
+          "autoPlay": "allowed",
+          "syndicate": "denied"
+        }
+      }
+    },
+    {
+      "id": "PLDzOvOd0wgh7RJT5s-w76rP4j2Jh2hL5KmpRbN_WWEMc",
+      "position": 3,
+      "author": "brotaojun",
+      "video": {
+        "id": "tI4jb-Aca9M",
+        "uploaded": "2012-12-23T21:46:46.000Z",
+        "updated": "2012-12-26T17:29:40.000Z",
+        "uploader": "mormontabchoir",
+        "category": "Music",
+        "title": "Bring Him Home, Les Misérables - Alfie Boe and the Mormon Tabernacle Choir",
+        "description": "Alfie Boe sings \"Bring Him Home,\" from Les Misérables at the 2012 Mormon Tabernacle Choir Christmas concert. Music by Claude-Michel Schönberg.\n\nEpisode 4344. Aired December 16, 2012",
+        "thumbnail": {
+          "sqDefault": "http://i.ytimg.com/vi/tI4jb-Aca9M/default.jpg",
+          "hqDefault": "http://i.ytimg.com/vi/tI4jb-Aca9M/hqdefault.jpg"
+        },
+        "player": {
+          "default": "http://www.youtube.com/watch?v=tI4jb-Aca9M&feature=youtube_gdata_player",
+          "mobile": "http://m.youtube.com/details?v=tI4jb-Aca9M"
+        },
+        "content": {
+          "5": "http://www.youtube.com/v/tI4jb-Aca9M?version=3&f=playlists&app=youtube_gdata",
+          "1": "rtsp://v2.cache7.c.youtube.com/CiULENy73wIaHAnTaxzgbyOOtBMYDSANFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp",
+          "6": "rtsp://v2.cache7.c.youtube.com/CiULENy73wIaHAnTaxzgbyOOtBMYESARFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp"
+        },
+        "duration": 278,
+        "aspectRatio": "widescreen",
+        "rating": 4.97411,
+        "likeCount": "307",
+        "ratingCount": 309,
+        "viewCount": 13695,
+        "favoriteCount": 0,
+        "commentCount": 18,
+        "accessControl": {
+          "comment": "moderated",
+          "commentVote": "allowed",
+          "videoRespond": "moderated",
+          "rate": "allowed",
+          "embed": "allowed",
+          "list": "allowed",
+          "autoPlay": "allowed",
+          "syndicate": "allowed"
+        }
+      }
+    },
+    {
+      "id": "PLDzOvOd0wgh7RJT5s-w76rOMTFEvHOinfu25wqL9lcMw",
+      "position": 2,
+      "author": "brotaojun",
+      "video": {
+        "id": "xCxV9CbC180",
+        "uploaded": "2012-12-13T16:20:28.000Z",
+        "updated": "2012-12-26T16:27:04.000Z",
+        "uploader": "mormonmessages",
+        "category": "Nonprofit",
+        "title": "Good Tidings of Great Joy: The Birth of Jesus Christ",
+        "description": "Share the good tidings of great joy: that He lives!",
+        "thumbnail": {
+          "sqDefault": "http://i.ytimg.com/vi/xCxV9CbC180/default.jpg",
+          "hqDefault": "http://i.ytimg.com/vi/xCxV9CbC180/hqdefault.jpg"
+        },
+        "player": {
+          "default": "http://www.youtube.com/watch?v=xCxV9CbC180&feature=youtube_gdata_player",
+          "mobile": "http://m.youtube.com/details?v=xCxV9CbC180"
+        },
+        "content": {
+          "5": "http://www.youtube.com/v/xCxV9CbC180?version=3&f=playlists&app=youtube_gdata",
+          "1": "rtsp://v1.cache2.c.youtube.com/CiULENy73wIaHAnN18Im9FUsxBMYDSANFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp",
+          "6": "rtsp://v1.cache2.c.youtube.com/CiULENy73wIaHAnN18Im9FUsxBMYESARFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp"
+        },
+        "duration": 300,
+        "aspectRatio": "widescreen",
+        "rating": 4.9160495,
+        "likeCount": "793",
+        "ratingCount": 810,
+        "viewCount": 101772,
+        "favoriteCount": 0,
+        "commentCount": 23,
+        "accessControl": {
+          "comment": "moderated",
+          "commentVote": "allowed",
+          "videoRespond": "denied",
+          "rate": "allowed",
+          "embed": "allowed",
+          "list": "allowed",
+          "autoPlay": "allowed",
+          "syndicate": "allowed"
+        }
+      }
+    },
+    {
+      "id": "PLDzOvOd0wgh7RJT5s-w76rGtcNP_FD6G0xCW0_YdzktY",
+      "position": 1,
+      "author": "brotaojun",
+      "video": {
+        "id": "qu5RY94ldDc",
+        "uploaded": "2012-12-13T17:09:30.000Z",
+        "updated": "2012-12-26T17:29:19.000Z",
+        "uploader": "thepianoguys",
+        "category": "Music",
+        "title": "We Three Kings (Piano/Cello) - ThePianoGuys",
+        "description": "Download this song on iTunes: https://itunes.apple.com/us/artist/the-piano-guys/id498030399\n\nDownload off our website: http://thepianoguys.com/newstore/songs/tpg-we-three-kings.html\n\n\"Presenting\" a Christmas gift from ThePianoGuys to all our TPG peeps -- order our BRAND NEW ALBUM now at Amazon.com and receive a $1.00 off using coupon code PIANOGUY. http://amzn.to/QoFwML -- Coupon offer expires on 12/20/2012.\n\nGet our brand new album on iTunes: https://itunes.apple.com/us/album/the-piano-guys/id557345871\n\nThank you to Citipond and Bryant Park for letting us crash their ice rink for a night to film this! It is a uniquely beautiful place with a distinctly \"Christmasy\" feel. Visit them here: http://citipondatbryantpark.com/  or follow them on Facebook here: http://www.facebook.com/citipond\n\nSubscribe to ThePianoGuys channel: http://www.youtube.com/subscription_center?add_user=thepianoguys\n\nFollow ThePianoGuys on Facebook:\nhttp://www.facebook.com/PianoGuys\nFollow ThePianoGuys on Twitter:\nhttp://www.twitter.com/PianoGuys\n\nLooking for more Christmas tunes by ThePianoGuys?\nO Come Emmanuel  http://www.youtube.com/watch?v=iO7ySn-Swwc \nCarol of the Bells  http://www.youtube.com/watch?v=e9GtPX6c_kg \nWhere Are You Christmas  http://www.youtube.com/watch?v=GRqjFcP_aw0 \n\nNo green screens were harmed (or used) in the making of this video.\n\nStory behind the song\n\nThere is so much mystery surrounding the story of the Three Kings. Who were they? Where did they come from? What relation did they have to each other? We only really know what (or Who) they were after.  Their only guides were ancient scripture and a bright star. They would not give up until they found the Savior of the world, no matter the cost. Our arrangement of this traditional Christmas song \"We Three Kings\" is a tribute to them, their tenacity, and their Noble Purpose.\n\nWe hope you can tell how much fun we had writing this! We mixed in just about every genre of music we could until the song had a stylistic \"identity crisis.\" =) We wanted to musically symbolize the energy and anticipation of the Three Wise Men and at the same time personify the mysterious origins of the story. We hope there's something for everyone in this arrangement -- jazz, funk, blues, rock, classical...and you'll also hear some ethnic Middle Eastern/Asian flairs here and there. For our fellow music geeks (we use that term affectionately) we also amped the level of ambiguity by using the key of D Dorian (a key somewhere between major and minor) in the verses and 5/4 timing in the chorus (5 beats per measure). This way the harmony and rhythm simulate a quest in one direction, but a journey marked by some semi-certain leaps of faith. \n\nThis video is among a small minority of ours filmed outside of Utah. We were in New York City for some television appearances and we had a \"free\" day. One thing is for certain...if The Piano Guys have a free day without our families around it inevitably becomes a work day! We decided to shoot We Three Kings somewhere in New York City. But we couldn't just shoot it \"guerilla style,\" walking around and filming at spots spontaneously (um...we tried that and we got kicked out of several places...at the business end of a New York accent!) So we had to secure a location formally. This site comes courtesy of Winston Simone and David Simone, our managers at DSW, who found a fan of TPG that worked at Bryant Park in the middle of New York City, where we were allowed to \"sneak\" a grand piano and a cello onto the Citipond Ice Rink and play this tune as hundreds of people skated around us. Our biggest challenge wasn't getting the piano on the ice....it was finding a parking place! We thought getting a piano on a 1,000-foot cliff, onto a train, onto a beach, and into a forest was hard...now we know getting one into downtown New York City was the most ambitious of them all! =)\n\nThe Gold Medal goes to Paul and Tel for learning how to skate and shoot without falling or bumping into other skaters on the ice.\n\nThis video features Steve's new carbon fiber cello. He loves it! It stayed in tune the entire video shoot. AMAZING! Check out the makers of this instrument here: Luis and Clark http://www.luisandclark.com/ \n\nThank you to YAMAHA for providing the piano we used in this video.\n\nIf you've read this far (and if you know New York) can you please tell us where to find the BEST New York Pizza? :-)\n\nMerry Christmas and a Happy New Year to all!\n\nCredits\n\"We Three Kings\" (Traditional)\nArrangement written by Steven Sharp Nelson & Al van der Beek\nArrangement produced by Al van der Beek, Jon Schmidt & Steven Sharp Nelson\nRecorded, mixed, and mastered by Al van der Beek at TPG Studios\nPerformed by\nSteven Sharp Nelson: cello, cello percussion, percussion\nJon Schmidt: piano\nAl van der Beek: percussion\nGiles Reaves: ethnic percussion\nVideo filmed, edited and produced by Paul Anderson & Tel Stewart\nFilmed on the Citipond Ice Rink at Bryant Park in New York City",
+        "thumbnail": {
+          "sqDefault": "http://i.ytimg.com/vi/qu5RY94ldDc/default.jpg",
+          "hqDefault": "http://i.ytimg.com/vi/qu5RY94ldDc/hqdefault.jpg"
+        },
+        "player": {
+          "default": "http://www.youtube.com/watch?v=qu5RY94ldDc&feature=youtube_gdata_player",
+          "mobile": "http://m.youtube.com/details?v=qu5RY94ldDc"
+        },
+        "content": {
+          "5": "http://www.youtube.com/v/qu5RY94ldDc?version=3&f=playlists&app=youtube_gdata",
+          "1": "rtsp://v3.cache5.c.youtube.com/CiULENy73wIaHAk3dCXeY1HuqhMYDSANFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp",
+          "6": "rtsp://v3.cache5.c.youtube.com/CiULENy73wIaHAk3dCXeY1HuqhMYESARFEgGUglwbGF5bGlzdHMM/0/0/0/video.3gp"
+        },
+        "duration": 232,
+        "aspectRatio": "widescreen",
+        "recorded": "2012-12-13",
+        "rating": 4.9677515,
+        "likeCount": "20178",
+        "ratingCount": 20342,
+        "viewCount": 649837,
+        "favoriteCount": 0,
+        "commentCount": 1782,
+        "restrictions": [
+          {
+            "type": "country",
+            "relationship": "deny",
+            "countries": "DE"
+          }
+        ],
+        "accessControl": {
+          "comment": "allowed",
+          "commentVote": "allowed",
+          "videoRespond": "moderated",
+          "rate": "allowed",
+          "embed": "allowed",
+          "list": "allowed",
+          "autoPlay": "moderated",
+          "syndicate": "allowed"
+        }
+      }
+    }
+  ]
+}}

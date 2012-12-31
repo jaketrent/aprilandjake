@@ -75,10 +75,26 @@ function MainCtrl($scope, $http) {
     }
   }
 
-  $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9?v=2&alt=jsonc&orderby=reversedPosition&callback=JSON_CALLBACK')
+  $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9?v=2&alt=jsonc&orderby=reversedPosition&max-results=10&callback=JSON_CALLBACK')
     .success(function(data, status, headers, config) {
       $scope.videos = data.data.items;
     }).error(function(data, status, headers, config) {
+      console.log('ERROR');
+      console.log(data);
+    });
+
+  $http.jsonp('https://www.googleapis.com/plus/v1/people/115032056022257436849/activities/public?maxResults=10&key=AIzaSyCNZ96JDofdI_c4BRpxGg8mlifPuROsKCU&callback=JSON_CALLBACK')
+    .success(function (data) {
+      $scope.images = _.uniq(_.filter(data.items, function (item) {
+        // only album posts
+        // && only albums I post
+        return item.object.attachments[0].objectType === 'album' &&
+          item.actor.id == '115032056022257436849';
+      }), function (item) {
+        // de-dup albums
+        return item.object.attachments[0].url;
+      });
+    }).error(function (data) {
       console.log('ERROR');
       console.log(data);
     });
