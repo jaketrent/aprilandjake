@@ -5,6 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
+var pinterest = require('./routes/pinterest');
 var cons = require('consolidate');
 var http = require('http');
 var swig = require('swig');
@@ -37,6 +38,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/ws/pinterest', pinterest.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

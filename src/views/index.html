@@ -39,6 +39,20 @@
       </ul>
       <a class="btn" href="https://plus.google.com/photos/115032056022257436849/albums">More Photos &rarr;</a>
     </div>
+
+    <div class="span6">
+      <h2>Pinterested?</h2>
+
+      <ul class="unstyled media-grid pins">
+        <li ng-repeat="pin in pins" class="pin">
+          <p>[[pin.desc]]</p>
+          <a ng-href="[[pin.url]]">
+            <img class="thumbnail" ng-src="[[pin.img]]" />
+          </a>
+        </li>
+      </ul>
+      <a class="btn" href="http://pinterest.jaketrent/pins">More Pins &rarr;</a>
+    </div>
   </div>
 
 {% endblock %}

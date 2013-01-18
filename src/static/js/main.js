@@ -99,6 +99,14 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
+  $http.get('/ws/pinterest')
+    .success(function (data) {
+      $scope.pins = data;
+    }).error(function (data) {
+      console.log('ERROR');
+      console.log(data);
+    });
+
   $scope.playVideo = function (videoId) {
     callPlayer('video-pane', 'loadVideoById', [videoId, 0, 'large']);
   };
