@@ -3,6 +3,8 @@
 {% block content %}
   <div class="row-fluid">
     <div class="span6">
+      <h2>Sweet Vidyos</h2>
+
       <div id="video-pane">
         <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
           ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
@@ -21,8 +23,11 @@
     </div>
 
     <div class="span6">
+      <h2>Cutie Pies</h2>
+
       <ul class="unstyled images">
         <li ng-repeat="img in images">
+          <h4>[[img.object.attachments[0].displayName]]</h4>
           <ul class="unstyled thumbs">
             <li ng-repeat="thumb in img.object.attachments[0].thumbnails|limitTo:7">
               <a href="[[thumb.url]]">

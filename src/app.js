@@ -17,7 +17,7 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.engine('.html', cons.swig);
   app.set('view engine', 'html');
-  app.use(express.favicon());
+  app.use(express.favicon(__dirname + '/static/images/favicon.png'));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());

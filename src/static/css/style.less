@@ -1,3 +1,15 @@
+body {
+  background: rgb(237,237,237); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,237,237,1)), color-stop(53%,rgba(246,246,246,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%); /* W3C */
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; font-weight: 300; }
+
 object,
 iframe,
 img {
@@ -5,6 +17,22 @@ img {
 }
 a {
   color: #00B7FF;
+}
+
+.header h1 {
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc,
+  0 2px 0 #c9c9c9,
+  0 3px 0 #bbb,
+  0 4px 0 #b9b9b9,
+  0 5px 0 #aaa,
+  0 6px 1px rgba(0,0,0,.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
 }
 
 .unstyled {
@@ -19,7 +47,12 @@ a {
     cursor: pointer;
     overflow: hidden;
     &:hover {
-      background: #efefef;
+      background: #d6d6d6;
+      -webkit-transition: all 400ms ease-in-out;
+      -moz-transition: all 400ms ease-in-out;
+      -ms-transition: all 400ms ease-in-out;
+      -o-transition: all 400ms ease-in-out;
+      transition: all 400ms ease-in-out;
     }
   }
   [class*="span"] {
