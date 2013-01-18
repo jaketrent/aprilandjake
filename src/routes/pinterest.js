@@ -18,14 +18,6 @@ exports.list = function (req, res) {
         desc: $pin.find('.description').text()
       });
     }
-    /*$pins.each(function(i, pin){
-      $pin = $(pin);
-      pins.push({
-        img: $pin.find('.PinImageImg').attr('src'),
-        url: 'http://pinterest.com' + $pin.find('.ImgLink').attr('href'),
-        desc: $pin.find('.description').text()
-      });
-    });*/
     res.send(pins);
   });
 };
