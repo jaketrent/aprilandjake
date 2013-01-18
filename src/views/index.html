@@ -2,9 +2,18 @@
 
 {% block content %}
   <div class="row-fluid">
-    <div class="span6">
-      <h2>Sweet Vidyos</h2>
+    <nav class="switcher">
+      <ul class="nav nav-pills">
+        <li ng-class="{ active: activeCol=='videos-col' }"><a href="#" ng-click="switchTo('videos-col')">Vids</a></li>
+        <li ng-class="{ active: activeCol=='images-col' }"><a href="#" ng-click="switchTo('images-col')">Imgs</a></li>
+        <li ng-class="{ active: activeCol=='pinterest-col' }"><a href="#" ng-click="switchTo('pinterest-col')">Pins</a></li>
+      </ul>
+    </nav>
+  </div>
 
+  <div class="row-fluid">
+    <div class="span6 col videos-col" ng-show="activeCol=='videos-col'">
+      <h2>Sweet Videos</h2>
       <div id="video-pane">
         <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
           ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
@@ -22,9 +31,8 @@
       <a class="btn" href="http://www.youtube.com/playlist?list=PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9&feature=view_all">More Videos &rarr;</a>
     </div>
 
-    <div class="span6">
+    <div class="span6 col images-col" ng-show="activeCol=='images-col'">
       <h2>Cutie Pies</h2>
-
       <ul class="unstyled images">
         <li ng-repeat="img in images">
           <h4>[[img.object.attachments[0].displayName]]</h4>
@@ -40,9 +48,8 @@
       <a class="btn" href="https://plus.google.com/photos/115032056022257436849/albums">More Photos &rarr;</a>
     </div>
 
-    <div class="span6">
+    <div class="span6 col pinterest-col" ng-show="activeCol=='pinterest-col'">
       <h2>Pinterested?</h2>
-
       <ul class="unstyled media-grid pins">
         <li ng-repeat="pin in pins" class="pin">
           <p>[[pin.desc]]</p>

@@ -111,4 +111,9 @@ function MainCtrl($scope, $http) {
     callPlayer('video-pane', 'loadVideoById', [videoId, 0, 'large']);
   };
 
+  $scope.activeCol = 'videos-col';
+  $scope.switchTo = function (col) {
+    $scope.activeCol = col;
+  };
+
 }
