@@ -90,6 +90,22 @@ a {
   }
 }
 
-.pins { -webkit-column-count: 2; -webkit-column-gap:20px; -moz-column-count:2; -moz-column-gap:20px; -o-column-count:2; -o-column-gap:20px; column-count:2; column-gap:20px; }
+.columns(@numCols: 2, @colGap: 20px) {
+  -webkit-column-count: @numCols; -webkit-column-gap: @colGap; -moz-column-count: @numCols; -moz-column-gap: @colGap; -o-column-count: @numCols; -o-column-gap: @colGap; column-count: @numCols; column-gap: @colGap;
+}
+
 .pin { margin-bottom: 25px; }
 .pin p { max-width: 202px; }
+
+@media (min-width: 420px) {
+  .pins { .columns(); }
+}
+@media (min-width: 640px) {
+  .pins { .columns(3); }
+}
+@media (min-width: 860px) {
+  .pins { .columns(4); }
+}
+@media (min-width: 1080px) {
+  .pins { .columns(5); }
+}
