@@ -12,7 +12,7 @@
   </div>
 
   <div class="row-fluid">
-    <div class="span6 col videos-col" ng-show="activeCol=='videos-col'">
+    <div class="span12 videos-col" ng-show="activeCol=='videos-col'">
       <h2>Sweet Videos</h2>
       <div id="video-pane">
         <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
@@ -30,8 +30,10 @@
       </ul>
       <a class="btn" href="http://www.youtube.com/playlist?list=PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9&feature=view_all">More Videos &rarr;</a>
     </div>
+  </div>
 
-    <div class="span6 col images-col" ng-show="activeCol=='images-col'">
+  <div class="row-fluid">
+    <div class="span12 images-col" ng-show="activeCol=='images-col'">
       <h2>Cutie Pies</h2>
       <ul class="unstyled images">
         <li ng-repeat="img in images">
@@ -47,8 +49,10 @@
       </ul>
       <a class="btn" href="https://plus.google.com/photos/115032056022257436849/albums">More Photos &rarr;</a>
     </div>
+  </div>
 
-    <div class="span6 col pinterest-col" ng-show="activeCol=='pinterest-col'">
+  <div class="row-fluid">
+    <div class="span12 pinterest-col" ng-show="activeCol=='pinterest-col'">
       <h2>Pinterested?</h2>
       <ul class="unstyled media-grid pins">
         <li ng-repeat="pin in pins" class="pin">
