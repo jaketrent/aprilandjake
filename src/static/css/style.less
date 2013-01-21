@@ -39,6 +39,7 @@ a {
   0 5px 10px rgba(0,0,0,.25),
   0 10px 10px rgba(0,0,0,.2),
   0 20px 20px rgba(0,0,0,.15);
+  .and { display: block; font-size: 30px; }
 }
 
 .unstyled {
@@ -98,6 +99,7 @@ a {
 .pin p { max-width: 202px; }
 
 @media (min-width: 420px) {
+  .header h1 .and { display: inline; font-size: inherit; }
   .pins { .columns(); }
 }
 @media (min-width: 640px) {
