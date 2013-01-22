@@ -14,11 +14,12 @@
   <div class="row-fluid">
     <div class="span12 videos-col" ng-show="activeCol=='videos-col'">
       <h2>Sweet Videos</h2>
-      <div id="video-pane">
-        <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
-          ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
+      <div class="videos">
+        <div id="video-pane">
+          <iframe width="640" height="390" frameborder="0" title="YouTube" type="text/html"
+                  ng-src="http://www.youtube.com/embed/[[videos[0].video.id]]?enablejsapi=1"></iframe>
+        </div>
       </div>
-
       <ul class="thumbnails unstyled videos">
         <li class="span12" ng-repeat="vid in videos">
           <div class="thumbnail" ng-click="playVideo(vid.video.id)">
