@@ -99,7 +99,7 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
-  $http.get('/ws/pinterest')
+  $http.get('/ws/pinterest/jaketrent')
     .success(function (data) {
       $scope.pins = data;
     }).error(function (data) {

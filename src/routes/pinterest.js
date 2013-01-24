@@ -3,9 +3,9 @@ var request = require('superagent');
 var cheerio = require('cheerio');
 
 exports.list = function (req, res) {
-
+  var username = req.param('username');
   request
-    .get('http://pinterest.com/jaketrent/pins/')
+    .get('http://pinterest.com/' + username + '/pins/')
     .end(function(response){
 
       console.log('pinterest ws status: ' + response.statusCode);
