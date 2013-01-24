@@ -9,7 +9,6 @@ exports.list = function (req, res) {
     .end(function(response){
 
       console.log('pinterest ws status: ' + response.statusCode);
-      console.log(response.text);
 
       var $ = cheerio.load(response.text);
       var pins = [];
