@@ -17,9 +17,10 @@
     "superagent": "0.10.x",
     "underscore": "1.4.x",
     "cheerio": "~0.10.5",
-    "request": "~2.12.0"
+    "superagent": "~0.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "main": "src/app.js",
   "repository": {
     "type": "git",
