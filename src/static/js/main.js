@@ -108,26 +108,13 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
-  // $http.get('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10')
-  //   .success(function (data) {
-  //     $scope.colorwheelies = data.response.posts;
-  //   }).error(function (data) {
-  //     console.log('ERROR');
-  //     console.log(data);
-  //   });
-
-  $.ajax({
-    url: 'http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10',
-    success: function (data) {
-      $scope.$apply(function () {
-        $scope.colorwheelies = data.response.posts;
-      });
-    },
-    error: function (data) {
+  $http.jsonp('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10&callback=JSON_CALLBACK')
+    .success(function (data) {
+      $scope.colorwheelies = data.response.posts;
+    }).error(function (data) {
       console.log('ERROR');
       console.log(data);
-    }
-  });
+    });
 
   $scope.playVideo = function (videoId) {
     callPlayer('video-pane', 'loadVideoById', [videoId, 0, 'large']);
