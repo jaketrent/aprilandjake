@@ -1,7 +1,8 @@
 
-angular.module('aj', [], function ($interpolateProvider) {
+angular.module('aj', [], function ($interpolateProvider, $httpProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
+  // delete $httpProvider.defaults.headers.common["X-Requested-With"];
 });
 
 function MainCtrl($scope, $http) {
@@ -102,6 +103,14 @@ function MainCtrl($scope, $http) {
   $http.get('/ws/pinterest/jaketrent')
     .success(function (data) {
       $scope.pins = data;
+    }).error(function (data) {
+      console.log('ERROR');
+      console.log(data);
+    });
+
+  $http.get('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10')
+    .success(function (data) {
+      $scope.colorwheelies = data.response.posts;
     }).error(function (data) {
       console.log('ERROR');
       console.log(data);
