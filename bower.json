@@ -1,9 +1,13 @@
 {
-  "name": "node-webapp-seed",
-  "version": "0.0.1",
+  "name": "aprilandjake",
+  "version": "4.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
     "app/static/js/components"
-  ]
+  ],
+  "dependencies": {
+    "fittext": "git@github.com:davatron5000/FitText.js.git",
+    "jquery": "~2.0.3"
+  }
 }

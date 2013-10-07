@@ -1,16 +1,16 @@
 {
-  "name": "node-webapp-seed",
-  "version": "0.0.1",
-  "main": "index.js",
+  "name": "aprilandjake",
+  "version": "4.0.0",
+  "main": "app/app.coffee",
   "scripts": {
     "start": "node_modules/supervisor/lib/cli-wrapper.js --extensions 'node|js|coffee' --ignore app/static/ app/app.coffee",
     "test": "node_modules/mocha/bin/mocha test/specs/**/*.spec.coffee --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaketrent/node-webapp-seed.git"
+    "url": "git://github.com/jaketrent/aprilandjake.git"
   },
-  "author": "",
+  "author": "Jake Trent",
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
