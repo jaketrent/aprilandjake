@@ -1,3 +1,6 @@
+*
+  box-sizing: border-box
+
 html
   background: #e3f5ab
   background-image: linear-gradient(#f8ffe8 0%, #e3f5ab 33%, #b7df2d 100%)
@@ -10,11 +13,39 @@ body
 
 .home
   color: #efefef
+
+.home-title
+.home-subtitle
+  font-family: $title-font-family
   text-shadow: 0 1px 0 #ababab, 1px 0 0 #ababab, -1px -1px 0 #fff
 
-  .home-title
-  .home-subtitle
-    font-family: $title-font-family
+.home-title
+  font-size: 160px
 
-  .home-title
-    font-size: 160px
+.home-fam-list
+  list-style: none
+  padding-left: 0
+  margin-top: 40px
+
+.home-fam-item
+  display: inline-block
+  margin-right: 40px
+
+  &:last-child
+    margin-right: 0
+
+.home-fam-img
+  border-radius: 50%
+
+.home-btn
+  display: inline-block
+  margin-top: 60px
+  padding: 20px 40px
+  font-family: $title-font-family
+  font-size: 30px
+  line-height: 1em
+  text-decoration: none
+  color: #b7df2d
+  background: #fff
+  border-radius: 10px
+
