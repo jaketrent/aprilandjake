@@ -81,6 +81,19 @@
     </div>
   </div>
 
+  <div class="row-fluid">
+    <div class="span12 sites-col" ng-show="activeCol=='sites-col'">
+      <h2>Peeps</h2>
+      <ul class="unstyled media-grid sites">
+        <li ng-repeat="site in sites" class="site">
+          <a ng-href="[[site.post_url]]">
+            <img class="thumbnail" ng-src="[[cw.photos[0].alt_sizes[2].url]]" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block bottom %}

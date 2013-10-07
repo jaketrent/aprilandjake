@@ -1,0 +1,9 @@
+{
+  "name": "node-webapp-seed",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/static/js/components"
+  ]
+}

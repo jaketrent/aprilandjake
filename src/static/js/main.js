@@ -116,6 +116,14 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
+  $http.jsonp('http://aprilandjake-data.herokuapp.com/sites?callback=JSON_CALLBACK')
+    .success(function (data) {
+      $scope.sites = data.response.sites;
+    }).error(function (data) {
+      console.log('ERROR');
+      console.log(data);
+    });
+
   $scope.playVideo = function (videoId) {
     callPlayer('video-pane', 'loadVideoById', [videoId, 0, 'large']);
   };

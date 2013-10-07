@@ -1,0 +1,41 @@
+font-smoothing-plus()
+  -webkit-font-smoothing: arguments
+  -moz-font-smoothing: arguments
+  font-smoothing: arguments
+
+text-size-adjust-plus()
+  -webkit-text-size-adjust: arguments
+  -ms-text-size-adjust: arguments
+
+reset-list()
+  list-style: none
+  margin-left: 0
+
+percent(raw)
+  unit( raw * 100, "%")
+
+float-left()
+  float: left
+  display: inline-block
+
+float-right()
+  float: right
+  display: inline-block
+
+ir()
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+
+ie7-inline-block()
+  *display: inline
+  *zoom: 1
+
+ie7-restore-left-whitespace()
+  *margin-left: .3em
+
+  &:first-child
+    *margin-left: 0
+
+image-path(path)
+  url('../img/' + path)
