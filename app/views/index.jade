@@ -3,20 +3,22 @@ extends layouts/aj
 block content
   .home
     header.home-header
-      h1.home-title April &amp; Jake
-      h2.home-subtitle &amp; Dallin &amp; Mackenzie &amp; Alaura
-
-    ul.home-fam-list
-      li.home-fam-item
-        img.home-fam-img(src="/img/april.jpg")
-      li.home-fam-item
-        img.home-fam-img(src="/img/jake.jpg")
-      li.home-fam-item
-        img.home-fam-img(src="/img/dallin.jpg")
-      li.home-fam-item
-        img.home-fam-img(src="/img/mackenzie.jpg")
-      li.home-fam-item
-        img.home-fam-img(src="/img/alaura.jpg")
+      h1.home-title
+        span.home-name April
+          img.home-fam-img(src="/img/april.jpg")
+        = ' &amp; '
+        span.home-name Jake
+          img.home-fam-img(src="/img/jake.jpg")
+      h2.home-subtitle
+        = '&amp; '
+        span.home-name Dallin
+          img.home-fam-img(src="/img/dallin.jpg")
+        = ' &amp; '
+        span.home-name Mackenzie
+          img.home-fam-img(src="/img/mackenzie.jpg")
+        = ' &amp; '
+        span.home-name Alaura
+          img.home-fam-img(src="/img/alaura.jpg")
 
     a.home-btn(href="http://www.youtube.com/playlist?list=PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9&feature=view_all")
       | I had to sleep.  For now, watch videos &raquo;
