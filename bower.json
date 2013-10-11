@@ -8,6 +8,8 @@
   ],
   "dependencies": {
     "fittext": "git@github.com:davatron5000/FitText.js.git",
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "angular": "1.2.0-rc.2",
+    "angular-models": "~1.2.3"
   }
 }
