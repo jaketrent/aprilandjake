@@ -20,7 +20,7 @@
     "coffee-script": "~1.6.2",
     "stylus": "~0.32.1",
     "nib": "~0.9.1",
-    "bower": "~0.8.6",
+    "bower": "~1.2.7",
     "underscore": "~1.4.4",
     "debug": "~0.7.2",
     "mincer": "~0.4.6"
