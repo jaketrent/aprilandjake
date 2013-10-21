@@ -4,7 +4,8 @@
   "main": "app/app.coffee",
   "scripts": {
     "start": "node_modules/supervisor/lib/cli-wrapper.js --extensions 'node|js|coffee' --ignore app/static/ app/app.coffee",
-    "test": "node_modules/mocha/bin/mocha test/specs/**/*.spec.coffee --watch"
+    "test": "node_modules/mocha/bin/mocha test/specs/**/*.spec.coffee --watch",
+    "postinstall": "node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
