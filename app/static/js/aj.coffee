@@ -1,4 +1,3 @@
-#= require components/jquery/jquery
 
 #= require_self
 
