@@ -1,5 +1,4 @@
 #= require components/jquery/jquery
-#= require components/underscore/underscore
 #= require components/angular/angular
 
 #= require_self
