@@ -1,6 +1,10 @@
 #= require components/jquery/jquery
 #= require components/underscore/underscore
 #= require components/angular/angular
+#= require components/angular-route/angular-route
+#= require components/angular-lifecycle/dist/angular-lifecycle
+#= require components/angular-linkto/dist/angular-linkto
+#= require components/angular-models/dist/angular-models
 
 #= require_self
 
