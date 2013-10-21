@@ -7,7 +7,6 @@
     "app/static/js/components"
   ],
   "dependencies": {
-    "fittext": "git@github.com:davatron5000/FitText.js.git",
     "jquery": "~2.0.3",
     "underscore": "~1.5.2",
     "angular": "1.2.0-rc.2",
