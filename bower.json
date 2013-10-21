@@ -9,9 +9,13 @@
   "dependencies": {
     "fittext": "git@github.com:davatron5000/FitText.js.git",
     "jquery": "~2.0.3",
+    "underscore": "~1.5.2",
     "angular": "1.2.0-rc.2",
-    "angular-models": "~1.3.1",
     "angular-route": "~1.2.0-rc.2",
-    "underscore": "~1.5.2"
+    "angular-models": "~1.3.1"
+  },
+  "resolutions": {
+    "underscore": "~1.5.2",
+    "angular": "1.2.0-rc.2"
   }
 }
