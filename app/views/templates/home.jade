@@ -35,6 +35,15 @@
         a.home-item-link(ng-href="{{ cw.post_url }}")
           img.home-item-thumb.home-item-thumb-color(ng-src="{{ cw.photos[0].alt_sizes[4].url }}")
 
+  section.home-section
+    ul.home-list
+      li.home-item
+        .home-item-title
+          a.home-item-title-link(href="https://plus.google.com/photos/115032056022257436849/albums") Cuties
+      li.home-item(ng-repeat="photo in photofeed.get('photos')")
+        a.home-item-link(ng-href="{{ photo.url }}")
+          img.home-item-thumb.home-item-thumb-color(ng-src="{{ photo.image.url }}")
+
   a.home-btn(href="http://www.youtube.com/playlist?list=PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9&feature=view_all")
     | I've had some sleep, but I need more.  Enjoy these videos.
 

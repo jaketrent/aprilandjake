@@ -112,14 +112,14 @@ function MainCtrl($scope, $http) {
 //      console.log(data);
 //    });
 
-
-  $http.jsonp('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10&callback=JSON_CALLBACK')
-    .success(function (data) {
-      $scope.colorwheelies = data.response.posts;
-    }).error(function (data) {
-      console.log('ERROR');
-      console.log(data);
-    });
+// DONE
+//  $http.jsonp('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10&callback=JSON_CALLBACK')
+//    .success(function (data) {
+//      $scope.colorwheelies = data.response.posts;
+//    }).error(function (data) {
+//      console.log('ERROR');
+//      console.log(data);
+//    });
 
   $http.jsonp('http://aprilandjake-data.herokuapp.com/sites?callback=JSON_CALLBACK')
     .success(function (data) {
