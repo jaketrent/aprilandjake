@@ -33,7 +33,7 @@
           a.home-item-title-link(href="http://colorwheelie.tumblr.com") Colors
       li.home-item(ng-repeat="cw in colorwheelie.get('wheelies')")
         a.home-item-link(ng-href="{{ cw.post_url }}")
-          img.home-item-thumb.home-item-thumb-color(ng-src="{{ cw.photos[0].alt_sizes[4].url }}")
+          .home-item-thumb.home-item-thumb-color(ng-style="{ 'background-image': 'url(' + cw.photos[0].alt_sizes[4].url + ')' }")
 
   section.home-section
     ul.home-list
