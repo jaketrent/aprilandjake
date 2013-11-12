@@ -76,13 +76,16 @@ function MainCtrl($scope, $http) {
     }
   }
 
-  $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9?v=2&alt=jsonc&orderby=reversedPosition&max-results=10&callback=JSON_CALLBACK')
-    .success(function(data, status, headers, config) {
-      $scope.videos = data.data.items;
-    }).error(function(data, status, headers, config) {
-      console.log('ERROR');
-      console.log(data);
-    });
+  // DONE
+//  $http.jsonp('http://gdata.youtube.com/feeds/api/playlists/PLbWbiOD0YMByR_l4GCzD7V3_d54HF9fZ9?v=2&alt=jsonc&orderby=reversedPosition&max-results=10&callback=JSON_CALLBACK')
+//    .success(function(data, status, headers, config) {
+//      $scope.videos = data.data.items;
+//    }).error(function(data, status, headers, config) {
+//      console.log('ERROR');
+//      console.log(data);
+//    });
+
+
 
   $http.jsonp('https://www.googleapis.com/plus/v1/people/115032056022257436849/activities/public?maxResults=10&key=AIzaSyCNZ96JDofdI_c4BRpxGg8mlifPuROsKCU&callback=JSON_CALLBACK')
     .success(function (data) {
@@ -100,13 +103,15 @@ function MainCtrl($scope, $http) {
       console.log(data);
     });
 
-  $http.get('/ws/pinterest/jaketrent')
-    .success(function (data) {
-      $scope.pins = data;
-    }).error(function (data) {
-      console.log('ERROR');
-      console.log(data);
-    });
+//  DOnT USE
+//  $http.get('/ws/pinterest/jaketrent')
+//    .success(function (data) {
+//      $scope.pins = data;
+//    }).error(function (data) {
+//      console.log('ERROR');
+//      console.log(data);
+//    });
+
 
   $http.jsonp('http://api.tumblr.com/v2/blog/colorwheelie.tumblr.com/posts/photo?api_key=BPbVt1ghZEsf4wIm9lf5wxXQPawks8YkbmrE4tWZZUanYKuuj5&limit=10&callback=JSON_CALLBACK')
     .success(function (data) {
