@@ -4,6 +4,8 @@ angular.module('aj.home').factory 'GooglePlusPhotoFeed', (Model) ->
 
     url: 'https://www.googleapis.com/plus/v1/people/115032056022257436849/activities/public?maxResults=10&key=AIzaSyCNZ96JDofdI_c4BRpxGg8mlifPuROsKCU&callback=JSON_CALLBACK'
 
+    max: 43
+
     deserialize: (data) ->
       photos = []
       albums = _.uniq(_.filter(data.items, (item) ->
@@ -18,4 +20,4 @@ angular.module('aj.home').factory 'GooglePlusPhotoFeed', (Model) ->
       for album in albums
         photos.push album.object.attachments[0].thumbnails
 
-      @set 'photos', _.flatten photos, true
+      @set 'photos', _.flatten(photos, true).slice 0, @max
