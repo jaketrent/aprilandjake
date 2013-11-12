@@ -50,4 +50,4 @@
         .home-item-title Family
       li.home-item(ng-repeat="site in sitesfeed.get('sites')")
         a.home-item-link(ng-href="{{ site.url }}")
-          img.home-item-thumb.home-item-thumb-site(ng-src="{{ site.image }}")
+          img.home-item-thumb.home-item-thumb-site(ng-src="{{ site.image }}", title="{{ site.name }}")
