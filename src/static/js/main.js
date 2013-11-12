@@ -86,22 +86,22 @@ function MainCtrl($scope, $http) {
 //    });
 
 
-
-  $http.jsonp('https://www.googleapis.com/plus/v1/people/115032056022257436849/activities/public?maxResults=10&key=AIzaSyCNZ96JDofdI_c4BRpxGg8mlifPuROsKCU&callback=JSON_CALLBACK')
-    .success(function (data) {
-      $scope.images = _.uniq(_.filter(data.items, function (item) {
-        // only album posts
-        // && only albums I post
-        return item.object.attachments[0].objectType === 'album' &&
-          item.actor.id == '115032056022257436849';
-      }), function (item) {
-        // de-dup albums
-        return item.object.attachments[0].url;
-      });
-    }).error(function (data) {
-      console.log('ERROR');
-      console.log(data);
-    });
+// DONE
+//  $http.jsonp('https://www.googleapis.com/plus/v1/people/115032056022257436849/activities/public?maxResults=10&key=AIzaSyCNZ96JDofdI_c4BRpxGg8mlifPuROsKCU&callback=JSON_CALLBACK')
+//    .success(function (data) {
+//      $scope.images = _.uniq(_.filter(data.items, function (item) {
+//        // only album posts
+//        // && only albums I post
+//        return item.object.attachments[0].objectType === 'album' &&
+//          item.actor.id == '115032056022257436849';
+//      }), function (item) {
+//        // de-dup albums
+//        return item.object.attachments[0].url;
+//      });
+//    }).error(function (data) {
+//      console.log('ERROR');
+//      console.log(data);
+//    });
 
 //  DOnT USE
 //  $http.get('/ws/pinterest/jaketrent')
