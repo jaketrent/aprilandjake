@@ -1,5 +1,17 @@
 body
-  padding: ($base-line-height * 3) $col-edge-padding
+  padding: $col-edge-padding
   text-align: center
   font-family: $sans-font-family
   font-size: $base-font-size * 3
+
+
+@media screen and (min-width: 481px)
+
+  body
+    padding-top: $base-line-height * 2
+
+
+@media screen and (min-width: 768px)
+
+  body
+    padding-top: $base-line-height * 3
